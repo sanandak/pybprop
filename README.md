@@ -1,6 +1,6 @@
 # pybprop - flash a parallax inc., propeller (v.1 ) from a pyboard
 
-For projects where a Parallax Inc. Propeller (www.parallaxinc.com) and a pyboard are used together, flash an image (binary or eeprom) to the propeller from the pyboard.
+For projects where a Parallax Inc. Propeller (http://www.parallax.com) and a pyboard are used together, flash an image (binary or eeprom) to the propeller from the pyboard.
 
 # Setup
 1. First, create a binary or eeprom image
