@@ -4,9 +4,9 @@ For projects where a Parallax Inc. Propeller (http://www.parallax.com) and a pyb
 
 # Setup
 1. First, create a binary or eeprom image
-  - $(PROPIDE)/openspin prog.spin [-e]
-  - -e: create a prog.eeprom image
-  - otherwise: create a prog.binary image
+    - $(PROPIDE)/openspin prog.spin [-e]
+    - -e: create a prog.eeprom image
+    - otherwise: create a prog.binary image
 2. copy to the pyboard (either copy to the mounted pyboard volume or use rshell)
 
 3. run the loader (either through `screen` or `rshell`)
