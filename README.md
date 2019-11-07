@@ -4,9 +4,9 @@ For projects where a Parallax Inc. Propeller (http://www.parallax.com) and a pyb
 
 # Setup
 1. First, create a binary or eeprom image
-$(PROPIDE)/openspin prog.spin [-e]
-  -e: create a prog.eeprom image
-  otherwise: create a prog.binary image
+  - $(PROPIDE)/openspin prog.spin [-e]
+  - -e: create a prog.eeprom image
+  - otherwise: create a prog.binary image
 2. copy to the pyboard (either copy to the mounted pyboard volume or use rshell)
 
 3. run the loader (either through `screen` or `rshell`)
@@ -15,8 +15,8 @@ $(PROPIDE)/openspin prog.spin [-e]
 >> loader.py [filename] [-t]
 
 With no arguments, query the prop for version number and exit
-if filename ends with .binary, load to RAM and run
-if filename ends with .eeprom, flash the eeprom and then run
+  - if filename ends with .binary, load to RAM and run
+  - if filename ends with .eeprom, flash the eeprom and then run
 
 -t: after loading, echo serial strings from the props to the terminal
 
