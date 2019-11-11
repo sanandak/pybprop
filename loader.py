@@ -29,6 +29,9 @@ and to bring it closer to the Python PEP 8 style guidelines.
 
 I have also extensively commented appropriate areas and attempted
 to explain in sufficient detail the workings of the protocol.
+
+Modified 2019 by Sridhar Anandakrishnan <sak@essc.psu.edu>
+for use from a pyboard in micropython
 """
 
 #import glob
@@ -47,6 +50,9 @@ CMD_LOADEEPROM     = 2
 CMD_LOADEEPROMRUN  = 3
 EEPROM_SIZE        = 32768
 
+UART_NUM = 4
+RESET_PIN = 'X3'
+
 class LoaderError(Exception): pass
 
 def do_nothing(msg):
@@ -57,8 +63,8 @@ class Loader():
     """Propeller code uploader."""
     
     def __init__(self):
-        self.serial = machine.UART(4, 115200, timeout=0, read_buf_len=300)
-        self.reset_gpio = machine.Pin('X3', machine.Pin.OUT)
+        self.serial = machine.UART(UART_NUM, 115200, timeout=0, read_buf_len=300)
+        self.reset_gpio = machine.Pin(RESET_PIN, machine.Pin.OUT)
         self.gpio = None
 
     def _cleanup(self):
